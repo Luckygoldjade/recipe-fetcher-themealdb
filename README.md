@@ -1,3 +1,5 @@
+# Academic project completed in Winter 2024
+
 ## Recipe Fetcher Microservice (Server) — `recipe-fetcher-themealdb`
 
 **Ingredient List Provider for Meal Search Client**  
@@ -18,6 +20,11 @@ This microservice acts as a backend API proxy that:
 
 This was developed as part of a collaborative microservice system demonstrating asynchronous messaging and distributed microservice design using Python and ZeroMQ.
 
+## Collaborators
+
+This project was originally developed in collaboration with teammate Jacky K, and myself. This repo is
+personalized, independently maintained version created for portfolio and resume.
+
 ---
 
 ## Technologies Used
@@ -25,6 +32,8 @@ This was developed as part of a collaborative microservice system demonstrating 
 - **Python 3**
 - **Requests** (`requests`)
 - **ZeroMQ** (`pyzmq`)
+
+(Installed via `requirements.txt`)
 
 ---
 
@@ -85,7 +94,6 @@ Make sure this server is running before the client connects via ZeroMQ.
       "strDescription": "Chicken is a versatile protein...",
       "strType": null
     },
-    ...
   ]
 }
 ```
@@ -99,7 +107,7 @@ Make sure this server is running before the client connects via ZeroMQ.
 
 - **Demo Video**:  
   Watch a brief demo of the microservice in action:  
-  📹 `docs/demo_video.mp4` or hosted version (optional: YouTube, GitHub Video Preview)
+  `docs/demo_video.mp4` or hosted version (optional: YouTube, GitHub Video Preview)
 
 ---
 
@@ -107,6 +115,7 @@ Make sure this server is running before the client connects via ZeroMQ.
 
 - This microservice is designed to be queried by a partner's client that helps users search for recipes.
 - Can be easily extended to support other endpoints from TheMealDB API.
+- This project was part of a larger collaboration where each team member wrote a client and a separate server for the other.
 
 ---
 
