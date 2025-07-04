@@ -1,7 +1,10 @@
-# Recipe Fetcher Microservice (Server) — `recipe-fetcher-themealdb`
+## Recipe Fetcher Microservice (Server) — `recipe-fetcher-themealdb`
 
 **Ingredient List Provider for Meal Search Client**  
 This Python-based microservice fetches ingredient data from TheMealDB API and returns it as a JSON response through ZeroMQ messaging. It was built to serve as the data provider for a partner’s recipe lookup client microservice.
+
+This repository contains my independent copy of a collaborative academic project completed as part of the
+Computer Science program.
 
 ---
 
