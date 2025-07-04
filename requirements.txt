@@ -1,14 +1,14 @@
 # ZeroMQ messaging library for client-server communication
-pyzmq==25.1.2
+pyzmq>=25.1.2
 
 # For potential HTTP requests to external APIs (e.g. TheMealDB)
-requests==2.31.0
+requests>=2.31.0
 
 # Web scraping dependency for the server (uses Chrome WebDriver)
-selenium==4.17.2
+selenium>=4.34.0
 
 # Interactive command-line prompt (used in client)
-questionary==2.0.1
+questionary>=2.1.0
 
 # Terminal styling for clean output (used in client)
-clint==0.5.1
+clint>=0.5.1
