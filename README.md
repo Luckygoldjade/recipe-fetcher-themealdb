@@ -46,21 +46,41 @@ personalized, independently maintained version created for portfolio and resume.
 
 ---
 
-## How to Run the Server
+## How to Run the Microservice System
+
+This project demonstrates a microservice architecture using three independent Python programs communicating over **ZeroMQ** sockets. Each component runs in a separate terminal window to simulate real-world service separation.
 
 ### 1. Install Requirements
+
+Install dependencies using:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Start the Server
+### 2. Start the Receiver (Terminal 1)
+
+This program listens for JSON ingredient data on port `5555` using a ZeroMQ REP socket.
+
+```bash
+python tst8_zeromq_receive_020324_v08.py
+```
+
+### 3. Start the Ingredient Fetcher Microservice (Terminal 2)
+
+This microservice fetches ingredient data from TheMealDB API and sends it via ZeroMQ using the `send_message()` helper.
 
 ```bash
 python recipe_data_server.py
 ```
 
-Make sure this server is running before the client connects via ZeroMQ.
+### 4. (Optional) Run the Test Client Sender (Terminal 3)
+
+You may use this optional test client to send example JSON manually for testing ZeroMQ communication.
+
+```bash
+python tst7_zeromq_send_020324_v07.py
+```
 
 ---
 
@@ -100,22 +120,21 @@ Make sure this server is running before the client connects via ZeroMQ.
 
 ---
 
-## Screenshots and Demo
+## Screenshots and Demos
 
 - **Screenshots**:  
   Terminal output, API response preview, and data received by the client are available under `/docs/screenshots/`.
 
 - **Demo Video**:  
-  Watch a brief demo of the microservice in action:  
-  `docs/demo_video.mp4` or hosted version (optional: YouTube, GitHub Video Preview)
+A demonstration video is included to show the system in action, running across three terminal windows:
 
----
+- **Terminal 1** runs the listener program (`tst8_zeromq_receive_020324_v08.py`)
+- **Terminal 2** runs the ingredient-fetching microservice (`recipe_data_server.py`)
+- **Terminal 3** (optional) runs a separate client sender (`tst7_zeromq_send_020324_v07.py`)
 
-## Notes
+Demo Video: [Watch on YouTube](https://youtu.be/nDXo_aGHGJY)
 
-- This microservice is designed to be queried by a partner's client that helps users search for recipes.
-- Can be easily extended to support other endpoints from TheMealDB API.
-- This project was part of a larger collaboration where each team member wrote a client and a separate server for the other.
+> 🧩 **Note:** This video and the supporting programs are designed to mimic a real-world microservice integration — where the data provider (`recipe_data_server.py`) is physically or logically separated from the client and uses a message-based protocol (ZeroMQ) to communicate between services.
 
 ---
 
