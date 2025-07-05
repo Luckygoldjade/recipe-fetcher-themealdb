@@ -86,13 +86,29 @@ python tst7_zeromq_send_020324_v07.py
 
 ## File Structure
 
-- recipe-fetcher-themealdb/
-  - recipe_data_server.py     # Main server application (calls MealDB API, returns data over ZeroMQ)
-  - requirements.txt          # Dependency list
-  - README.md                 # Project overview and instructions
-  - docs/
-    - *.png and *.pdf: Diagrams, demo screenshots, and design notes
-    - demo_video.mp4: Terminal screen capture of server in action
+The repository contains the following files:
+
+**A. Root Directory:**
+
+- `recipe_data_server.py`  
+  ‣ Main server application that fetches ingredient data from TheMealDB API and sends it over ZeroMQ.
+
+- `tst7_zeromq_send_020324_v07.py`  
+  ‣ Test client script that sends JSON data via ZeroMQ REQ socket.
+
+- `tst8_zeromq_receive_020324_v08.py`  
+  ‣ ZeroMQ receiver that listens for incoming data on port 5555.
+
+- `requirements.txt`  
+  ‣ Dependency list for the microservice components.
+
+- `README.md`  
+  ‣ Project overview, instructions, and demo explanation.
+
+**B. `docs/` Directory:**
+
+- `*.png`, `*.pdf`  
+  ‣ Screenshots, diagrams, and documentation visuals.
 
 ---
 
