@@ -152,8 +152,8 @@ The following screenshots are available in the `/docs/screenshots/` directory to
 
 3. **System Architecture Diagram (UML):**  
    A UML-style diagram illustrating how the three components—`tst7_*.py`, `recipe_data_server.py`, and `tst8_*.py`—communicate using ZeroMQ sockets in a decoupled microservice setup.  
-   ![UML Diagram](docs/screenshots/Assign_9_UML_070725_v03.drawio.png)
-   
+   ![UML Diagram](docs/screenshots/Assign_9_UML_drawio_070725_v03.png)
+
 - **Demo Video**:  
 A demonstration video is included to show the system in action, running across three terminal windows:
 
