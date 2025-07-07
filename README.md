@@ -107,8 +107,8 @@ The repository contains the following files:
 
 **B. `docs/` Directory:**
 
-- `*.png`, `*.pdf`  
-  ‣ Screenshots, diagrams, and documentation visuals.
+  - screenshots/                        # Interface and result screenshots (for README and report)
+  - *.pdf                               # Report or design documents
 
 ---
 
@@ -139,8 +139,21 @@ The repository contains the following files:
 ## Screenshots and Demos
 
 - **Screenshots**:  
-  Terminal output, API response preview, and data received by the client are available under `/docs/screenshots/`.
 
+The following screenshots are available in the `/docs/screenshots/` directory to illustrate key stages of the microservice system:
+
+1. **ThemealDB API Test (Without ZeroMQ):**  
+   Console output showing a standalone test of `recipe_data_server.py` fetching ingredient data directly from TheMealDB API without any socket communication.  
+   ![API Only](docs/screenshots/assign_9_test_themealdb_api_only_070725_v01.png)
+
+2. **ThemealDB API with ZeroMQ Pipeline:**  
+   Terminal views of `recipe_data_server.py` sending JSON data through a ZeroMQ REQ socket and `tst8_zeromq_receive_*.py` receiving the data via REP socket, confirming end-to-end delivery.  
+   ![API with ZeroMQ](docs/screenshots/assign_9_test_themealdb_api_with_zeromq_070725_v02.png)
+
+3. **System Architecture Diagram (UML):**  
+   A UML-style diagram illustrating how the three components—`tst7_*.py`, `recipe_data_server.py`, and `tst8_*.py`—communicate using ZeroMQ sockets in a decoupled microservice setup.  
+   ![UML Diagram](docs/screenshots/Assign_9_UML_070725_v03.drawio.png)
+   
 - **Demo Video**:  
 A demonstration video is included to show the system in action, running across three terminal windows:
 
